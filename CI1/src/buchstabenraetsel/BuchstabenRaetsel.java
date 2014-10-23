@@ -19,6 +19,7 @@ import java.util.logging.Logger;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.RecognitionException;
 
 /**
  *
@@ -52,7 +53,7 @@ public class BuchstabenRaetsel {
         }
         return null;
     }
-    public BuchstabenRaetsel(String filePath){
+    public BuchstabenRaetsel(String filePath) throws RecognitionException{
         //Loading the DSL script into the ANTLR stream.
         CharStream cs = new ANTLRInputStream(readFile(filePath));
         //Passing the input to the lexer to create tokens
@@ -61,11 +62,8 @@ public class BuchstabenRaetsel {
 
         //Passing the tokens to the parser to create the parse trea. 
         buchstabenGrammarParser parser = new buchstabenGrammarParser(tokens);
-        parser.start();
+        Object test = parser.start();
         
         
-    }
-    public static void main(String[] args) {
-        BuchstabenRaetsel test = new BuchstabenRaetsel("C:\\Users\\ClausTorben\\OneDrive\\Dokumente\\Studium\\Praktikum\\CI\\CI1\\src\\buchstabenraetsel\\raetsel1.txt");
     }
 }

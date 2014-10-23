@@ -5,8 +5,16 @@
         <group>
             <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/src/buchstabenraetsel/raetsel1.txt</file>
             <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/src/minip/minipGrammar.g4</file>
+            <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/src/buchstabenraetsel/buchstabenGrammarListener.java</file>
             <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/src/minip/testProgram1.txt</file>
+            <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/src/buchstabenraetsel/buchstabenGrammarLexer.java</file>
+            <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/src/buchstabenraetsel/BuchstabenRaetsel.java</file>
+            <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/test/buchstabenraetsel/BuchstabenRaetselTest.java</file>
             <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/src/buchstabenraetsel/buchstabenGrammar.g4</file>
+            <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/src/buchstabenraetsel/buchstabenGrammarParser.java</file>
+            <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/src/minip/MiniP.java</file>
+            <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/src/minip/minipGrammarParser.java</file>
+            <file>file:/C:/Users/ClausTorben/OneDrive/Dokumente/Studium/Praktikum/CI/CI1/src/buchstabenraetsel/buchstabenGrammarBaseListener.java</file>
         </group>
     </open-files>
 </project-private>

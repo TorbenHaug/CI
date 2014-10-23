@@ -15,8 +15,8 @@ programmcode 	: anweisung*;
 anweisung 	: zuweisung | condition | schleife | println | read;
 
 // Zuwweisung
-zuweisung 	: ID ZUWEISUNGSSYMBOL zuweisungvalue CMDENDSYMBOL;
-zuweisungvalue 	: STRINGCONST | BOOLEANCONST | vergleich | arithausdr; // INTEGERCONST | REALCONST |  entfernt, da es durch den arithausdr ersetzt wird. 
+zuweisung 	: ID ZUWEISUNGSSYMBOL zuweisungswert CMDENDSYMBOL;
+zuweisungswert 	: STRINGCONST | BOOLEANCONST | vergleich | arithausdr; // INTEGERCONST | REALCONST |  entfernt, da es durch den arithausdr ersetzt wird. 
 
 //Conditon
 condition 	: IFSYMBOL vergleich THENSYMBOL programmcode (ELSESYMBOL programmcode)? FISYMBOL;
@@ -34,7 +34,7 @@ integer         : PLUSMINUSSYMBOL? UNSIGNEDINTEGERCONST;
 real            : integer REALCUTSYMBOL UNSIGNEDINTEGERCONST?;
 
 //print
-println		: PRINTLNSYMBOL KLAMMERAUFSYMBOL zuweisungvalue* KLAMMERZUSYMBOL CMDENDSYMBOL; 
+println		: PRINTLNSYMBOL KLAMMERAUFSYMBOL zuweisungswert* KLAMMERZUSYMBOL CMDENDSYMBOL; 
 
 //READ
 read		: READSYMBOL KLAMMERAUFSYMBOL ID KLAMMERZUSYMBOL CMDENDSYMBOL;
@@ -74,16 +74,20 @@ REALCUTSYMBOL   : '.';
 
 UNSIGNEDINTEGERCONST 	: DIGIT+;		
 BOOLEANCONST	: 'true' | 'false';
-STRINGCONST	: '(\'' .*? '\')'; //? ersetzt options {greedy=false;}
+//Antlr3
+//STRINGCONST	: '(\'' (options {greedy=false;} : .)* '\')'; 
+//Antlr4
+STRINGCONST	: '(\'' .*? '\')'; //? ersetzt options {greedy=false;} : 
 
 ID  :	('a'..'z'|'A'..'Z') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
     ;
  
 fragment DIGIT 	:'0'..'9';
 
-
-COMMENT	:	'/*' .*? '*/' {skip();} // made by antlr
-    ;
+//Antlr3
+//COMMENT	:	'/*' (options {greedy=false;} : .)* '*/' {skip();} ;
+//Antlr4
+COMMENT	:	'/*' .*? '*/' {skip();} ;
 
 WS  :   ( ' ' // made by antlr
         | '\t'
