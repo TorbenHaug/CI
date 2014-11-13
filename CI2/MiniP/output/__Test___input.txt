@@ -1,0 +1,23 @@
+program 
+    string s,b; 
+    integer i;
+    real r;
+    boolean b;
+begin 
+    a := (' ');
+    a := ('sadadsadsad sdsac sdac asfc asfc');
+    b := -1;
+    b := 12;
+    r := +45.;
+    r := -3.8;
+    r := 3.8;
+    b := true;
+    b := false;
+    if 5>8 then
+        c := 44;
+    else
+        if 4<=9 then 
+
+        fi
+    fi
+end
