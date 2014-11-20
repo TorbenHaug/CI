@@ -10,7 +10,6 @@ import choco.Options;
 import choco.cp.model.CPModel;
 import choco.cp.solver.CPSolver;
 import choco.kernel.model.Model;
-import choco.kernel.model.variables.integer.IntegerExpressionVariable;
 import choco.kernel.model.variables.integer.IntegerVariable;
 import choco.kernel.solver.Solver;
 
@@ -19,6 +18,18 @@ import choco.kernel.solver.Solver;
  * @author abq308
  */
 public class Donald_2 {
+    private static void addEqualsConstraint(Model model, IntegerVariable x, IntegerVariable y, IntegerVariable u_in, IntegerVariable u_out, IntegerVariable z) {
+        model.addConstraint(Choco.ifThenElse(
+            Choco.geq(Choco.plus(x, Choco.plus(y, u_in)), 10),
+                Choco.and(
+                    Choco.eq(u_out, 1),
+                    Choco.eq(Choco.plus(x, Choco.plus(y, u_in)), Choco.plus(z, 10))),
+                Choco.and(
+                    Choco.eq(u_out, 0),
+                    Choco.eq(Choco.plus(x, Choco.plus(y, u_in)), z))
+        ));
+    }
+    
     public static void main(String[] args) {
         // Build model
         Model model = new CPModel();
@@ -35,31 +46,54 @@ public class Donald_2 {
         IntegerVariable b = Choco.makeIntVar("b", 0, 9, Options.V_ENUM);
         IntegerVariable t = Choco.makeIntVar("t", 0, 9, Options.V_ENUM);
         
-        // Array of coefficients
-        int[] c = new int[]{100000, 10000, 1000, 100, 10, 1};
+        IntegerVariable u0 = Choco.makeIntVar("u1", 0, 0, Options.V_ENUM);
+        IntegerVariable u1 = Choco.makeIntVar("u1", 0, 1, Options.V_ENUM);
+        IntegerVariable u2 = Choco.makeIntVar("u2", 0, 1, Options.V_ENUM);
+        IntegerVariable u3 = Choco.makeIntVar("u3", 0, 1, Options.V_ENUM);
+        IntegerVariable u4 = Choco.makeIntVar("u4", 0, 1, Options.V_ENUM);
+        IntegerVariable u5 = Choco.makeIntVar("u5", 0, 1, Options.V_ENUM);
+        IntegerVariable u6 = Choco.makeIntVar("u6", 0, 1, Options.V_ENUM);
         
-        // Declare every combination of letter as an integer expression
-        IntegerExpressionVariable donaldLetters = Choco.scalar(new IntegerVariable[]{d, o, n, a,
-        l, d}, c);
-        IntegerExpressionVariable geraldLetters = Choco.scalar(new IntegerVariable[]{g, e, r, a,
-        l, d}, c);
-        IntegerExpressionVariable robertLetters = Choco.scalar(new IntegerVariable[]{r, o, b, e,
-        r, t}, c);
-        
-        // Add constraint name sum
-        model.addConstraint(Choco.eq(Choco.plus(donaldLetters, geraldLetters), robertLetters));
-        
-        // Add constraint of all different letters.
+        // Add constraints.
         model.addConstraint(Choco.allDifferent(d, o, n, a, l, g, e, r, b, t));
+        model.addConstraint(Choco.eq(u6, 0));
+        addEqualsConstraint(model, d, g, u5, u6, r);
+        addEqualsConstraint(model, o, e, u4, u5, o);
+        addEqualsConstraint(model, n, r, u3, u4, b);
+        addEqualsConstraint(model, a, a, u2, u3, e);
+        addEqualsConstraint(model, l, l, u1, u2, r);
+        addEqualsConstraint(model, d, d, u0, u1, t);
         
         // Build a solver, read the model and solve it
         Solver s = new CPSolver();
         s.read(model);
-        s.solve();
+        boolean result = s.solve();
         
-        // Print name value
-        System.out.println("donald = " + s.getVar(d).getVal());
-        System.out.println("gerald = " + s.getVar(g).getVal());
-        System.out.println("robert = " + s.getVar(r).getVal());
+        if (result) {
+            // Print name value
+            System.out.print("d = " + s.getVar(d).getVal());
+            System.out.print("o = " + s.getVar(o).getVal());
+            System.out.print("n = " + s.getVar(n).getVal());
+            System.out.print("a = " + s.getVar(a).getVal());
+            System.out.print("l = " + s.getVar(l).getVal());
+            System.out.print("d = " + s.getVar(d).getVal());
+            System.out.println();
+            System.out.print("g = " + s.getVar(g).getVal());
+            System.out.print("e = " + s.getVar(e).getVal());
+            System.out.print("r = " + s.getVar(r).getVal());
+            System.out.print("a = " + s.getVar(a).getVal());
+            System.out.print("l = " + s.getVar(l).getVal());
+            System.out.print("d = " + s.getVar(d).getVal());
+            System.out.println();
+            System.out.print("r = " + s.getVar(r).getVal());
+            System.out.print("o = " + s.getVar(o).getVal());
+            System.out.print("b = " + s.getVar(b).getVal());
+            System.out.print("e = " + s.getVar(e).getVal());
+            System.out.print("r = " + s.getVar(r).getVal());
+            System.out.print("t = " + s.getVar(t).getVal());
+            //System.out.print("u6 = " + s.getVar(u6).getVal());
+        } else {
+            System.err.println("ERROR!");
+        }
     }
 }
