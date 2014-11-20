@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g 2014-11-13 08:20:39
+// $ANTLR 3.4 C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g 2014-11-20 16:29:00
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -33,7 +33,7 @@ public class buchstabenGrammarParser extends DebugParser {
 
 
 public static final String[] ruleNames = new String[] {
-    "invalidRule", "char_string", "start", "term", "expression_line", "operation_line", 
+    "invalidRule", "term", "expression_line", "char_string", "start", "operation_line", 
     "equality_line"
 };
 
@@ -92,19 +92,28 @@ public TreeAdaptor getTreeAdaptor() {
 }
 
     public String[] getTokenNames() { return buchstabenGrammarParser.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g"; }
 
 
     	// Generiert einen Teil des Baumes
     	private CommonTree getSubtree(String op, Tree left, Tree middle, Tree right) {
     		CommonTree result = (CommonTree) adaptor.create(EQUAL_SIGN, "=");
     		
-    		CommonTree term = (CommonTree) adaptor.create(PLUS_MINUS_SIGN, op);
-    		adaptor.addChild(term, left);
-    		adaptor.addChild(term, middle);
-    		
-    		adaptor.addChild(result, term);
-    		adaptor.addChild(result, right); 
+    		if (op.equals("+")) {
+    			CommonTree term = (CommonTree) adaptor.create(PLUS_MINUS_SIGN, "+");
+    			adaptor.addChild(term, left);
+    			adaptor.addChild(term, middle);
+    			
+    			adaptor.addChild(result, term);
+    			adaptor.addChild(result, right);
+    		} else {
+    			CommonTree term = (CommonTree) adaptor.create(PLUS_MINUS_SIGN, "+");
+    			adaptor.addChild(term, right);
+    			adaptor.addChild(term, middle);
+    			
+    			adaptor.addChild(result, term);
+    			adaptor.addChild(result, left);
+    		}
     		
     		return result;
     	}
@@ -117,7 +126,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "start"
-    // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:28:1: start : el1= expression_line ol= operation_line el2= expression_line equality_line el3= expression_line ->;
+    // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:37:1: start : el1= expression_line ol= operation_line el2= expression_line equality_line el3= expression_line ->;
     public final buchstabenGrammarParser.start_return start() throws RecognitionException {
         buchstabenGrammarParser.start_return retval = new buchstabenGrammarParser.start_return();
         retval.start = input.LT(1);
@@ -142,50 +151,50 @@ public TreeAdaptor getTreeAdaptor() {
         try { dbg.enterRule(getGrammarFileName(), "start");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(28, 0);
+        dbg.location(37, 0);
 
         try {
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:28:7: (el1= expression_line ol= operation_line el2= expression_line equality_line el3= expression_line ->)
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:37:7: (el1= expression_line ol= operation_line el2= expression_line equality_line el3= expression_line ->)
             dbg.enterAlt(1);
 
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:28:9: el1= expression_line ol= operation_line el2= expression_line equality_line el3= expression_line
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:37:9: el1= expression_line ol= operation_line el2= expression_line equality_line el3= expression_line
             {
-            dbg.location(28,13);
+            dbg.location(37,13);
             pushFollow(FOLLOW_expression_line_in_start49);
             el1=expression_line();
 
             state._fsp--;
 
             stream_expression_line.add(el1.getTree());
-            dbg.location(29,5);
+            dbg.location(38,5);
             pushFollow(FOLLOW_operation_line_in_start56);
             ol=operation_line();
 
             state._fsp--;
 
             stream_operation_line.add(ol.getTree());
-            dbg.location(30,6);
+            dbg.location(39,6);
             pushFollow(FOLLOW_expression_line_in_start63);
             el2=expression_line();
 
             state._fsp--;
 
             stream_expression_line.add(el2.getTree());
-            dbg.location(31,2);
+            dbg.location(40,2);
             pushFollow(FOLLOW_equality_line_in_start66);
             equality_line1=equality_line();
 
             state._fsp--;
 
             stream_equality_line.add(equality_line1.getTree());
-            dbg.location(32,6);
+            dbg.location(41,6);
             pushFollow(FOLLOW_expression_line_in_start73);
             el3=expression_line();
 
             state._fsp--;
 
             stream_expression_line.add(el3.getTree());
-            dbg.location(32,24);
+            dbg.location(41,24);
 
             	CommonTree result = (CommonTree) adaptor.create(SYMBOLPUZZLE, "SYMBOLPUZZLE");
             	
@@ -215,9 +224,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 48:3: ->
+            // 57:3: ->
             {
-                dbg.location(48,6);
+                dbg.location(57,6);
                 adaptor.addChild(root_0, result);
 
             }
@@ -244,7 +253,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(48, 13);
+        dbg.location(57, 13);
 
         }
         finally {
@@ -269,7 +278,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "expression_line"
-    // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:51:1: expression_line returns [String op, Tree left, Tree middle, Tree right] : t= term EQUAL_SIGN r= char_string ;
+    // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:60:1: expression_line returns [String op, Tree left, Tree middle, Tree right] : t= term EQUAL_SIGN r= char_string ;
     public final buchstabenGrammarParser.expression_line_return expression_line() throws RecognitionException {
         buchstabenGrammarParser.expression_line_return retval = new buchstabenGrammarParser.expression_line_return();
         retval.start = input.LT(1);
@@ -288,39 +297,39 @@ public TreeAdaptor getTreeAdaptor() {
         try { dbg.enterRule(getGrammarFileName(), "expression_line");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(51, 0);
+        dbg.location(60, 0);
 
         try {
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:51:71: (t= term EQUAL_SIGN r= char_string )
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:60:71: (t= term EQUAL_SIGN r= char_string )
             dbg.enterAlt(1);
 
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:52:2: t= term EQUAL_SIGN r= char_string
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:61:2: t= term EQUAL_SIGN r= char_string
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            dbg.location(52,3);
+            dbg.location(61,3);
             pushFollow(FOLLOW_term_in_expression_line93);
             t=term();
 
             state._fsp--;
 
             adaptor.addChild(root_0, t.getTree());
-            dbg.location(52,9);
+            dbg.location(61,9);
             EQUAL_SIGN2=(Token)match(input,EQUAL_SIGN,FOLLOW_EQUAL_SIGN_in_expression_line95); 
             EQUAL_SIGN2_tree = 
             (CommonTree)adaptor.create(EQUAL_SIGN2)
             ;
             adaptor.addChild(root_0, EQUAL_SIGN2_tree);
 
-            dbg.location(52,21);
+            dbg.location(61,21);
             pushFollow(FOLLOW_char_string_in_expression_line99);
             r=char_string();
 
             state._fsp--;
 
             adaptor.addChild(root_0, r.getTree());
-            dbg.location(52,34);
+            dbg.location(61,34);
 
             		retval.op = (t!=null?t.op:null);
             		retval.left = (t!=null?t.left:null);
@@ -347,7 +356,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(57, 2);
+        dbg.location(66, 2);
 
         }
         finally {
@@ -371,7 +380,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "term"
-    // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:59:1: term returns [Tree left,String op, Tree middle] : l= char_string o= PLUS_MINUS_SIGN m= char_string ;
+    // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:68:1: term returns [Tree left,String op, Tree middle] : l= char_string o= PLUS_MINUS_SIGN m= char_string ;
     public final buchstabenGrammarParser.term_return term() throws RecognitionException {
         buchstabenGrammarParser.term_return retval = new buchstabenGrammarParser.term_return();
         retval.start = input.LT(1);
@@ -390,39 +399,39 @@ public TreeAdaptor getTreeAdaptor() {
         try { dbg.enterRule(getGrammarFileName(), "term");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(59, 0);
+        dbg.location(68, 0);
 
         try {
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:59:47: (l= char_string o= PLUS_MINUS_SIGN m= char_string )
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:68:47: (l= char_string o= PLUS_MINUS_SIGN m= char_string )
             dbg.enterAlt(1);
 
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:60:2: l= char_string o= PLUS_MINUS_SIGN m= char_string
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:69:2: l= char_string o= PLUS_MINUS_SIGN m= char_string
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            dbg.location(60,3);
+            dbg.location(69,3);
             pushFollow(FOLLOW_char_string_in_term115);
             l=char_string();
 
             state._fsp--;
 
             adaptor.addChild(root_0, l.getTree());
-            dbg.location(60,17);
+            dbg.location(69,17);
             o=(Token)match(input,PLUS_MINUS_SIGN,FOLLOW_PLUS_MINUS_SIGN_in_term119); 
             o_tree = 
             (CommonTree)adaptor.create(o)
             ;
             adaptor.addChild(root_0, o_tree);
 
-            dbg.location(60,35);
+            dbg.location(69,35);
             pushFollow(FOLLOW_char_string_in_term123);
             m=char_string();
 
             state._fsp--;
 
             adaptor.addChild(root_0, m.getTree());
-            dbg.location(60,48);
+            dbg.location(69,48);
 
             		retval.left = (l!=null?((CommonTree)l.tree):null);
             		retval.op = (o!=null?o.getText():null);
@@ -448,7 +457,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(64, 2);
+        dbg.location(73, 2);
 
         }
         finally {
@@ -472,7 +481,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "operation_line"
-    // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:66:1: operation_line returns [String left, String middle, String right] : l= PLUS_MINUS_SIGN m= PLUS_MINUS_SIGN r= PLUS_MINUS_SIGN ;
+    // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:75:1: operation_line returns [String left, String middle, String right] : l= PLUS_MINUS_SIGN m= PLUS_MINUS_SIGN r= PLUS_MINUS_SIGN ;
     public final buchstabenGrammarParser.operation_line_return operation_line() throws RecognitionException {
         buchstabenGrammarParser.operation_line_return retval = new buchstabenGrammarParser.operation_line_return();
         retval.start = input.LT(1);
@@ -491,39 +500,39 @@ public TreeAdaptor getTreeAdaptor() {
         try { dbg.enterRule(getGrammarFileName(), "operation_line");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(66, 0);
+        dbg.location(75, 0);
 
         try {
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:66:65: (l= PLUS_MINUS_SIGN m= PLUS_MINUS_SIGN r= PLUS_MINUS_SIGN )
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:75:65: (l= PLUS_MINUS_SIGN m= PLUS_MINUS_SIGN r= PLUS_MINUS_SIGN )
             dbg.enterAlt(1);
 
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:67:2: l= PLUS_MINUS_SIGN m= PLUS_MINUS_SIGN r= PLUS_MINUS_SIGN
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:76:2: l= PLUS_MINUS_SIGN m= PLUS_MINUS_SIGN r= PLUS_MINUS_SIGN
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            dbg.location(67,3);
+            dbg.location(76,3);
             l=(Token)match(input,PLUS_MINUS_SIGN,FOLLOW_PLUS_MINUS_SIGN_in_operation_line139); 
             l_tree = 
             (CommonTree)adaptor.create(l)
             ;
             adaptor.addChild(root_0, l_tree);
 
-            dbg.location(67,21);
+            dbg.location(76,21);
             m=(Token)match(input,PLUS_MINUS_SIGN,FOLLOW_PLUS_MINUS_SIGN_in_operation_line143); 
             m_tree = 
             (CommonTree)adaptor.create(m)
             ;
             adaptor.addChild(root_0, m_tree);
 
-            dbg.location(67,39);
+            dbg.location(76,39);
             r=(Token)match(input,PLUS_MINUS_SIGN,FOLLOW_PLUS_MINUS_SIGN_in_operation_line147); 
             r_tree = 
             (CommonTree)adaptor.create(r)
             ;
             adaptor.addChild(root_0, r_tree);
 
-            dbg.location(67,56);
+            dbg.location(76,56);
 
             		retval.left = (l!=null?l.getText():null);
             		retval.middle = (m!=null?m.getText():null);
@@ -549,7 +558,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(71, 2);
+        dbg.location(80, 2);
 
         }
         finally {
@@ -570,7 +579,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "equality_line"
-    // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:73:1: equality_line : EQUAL_SIGN EQUAL_SIGN EQUAL_SIGN ;
+    // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:82:1: equality_line : EQUAL_SIGN EQUAL_SIGN EQUAL_SIGN ;
     public final buchstabenGrammarParser.equality_line_return equality_line() throws RecognitionException {
         buchstabenGrammarParser.equality_line_return retval = new buchstabenGrammarParser.equality_line_return();
         retval.start = input.LT(1);
@@ -589,32 +598,32 @@ public TreeAdaptor getTreeAdaptor() {
         try { dbg.enterRule(getGrammarFileName(), "equality_line");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(73, 0);
+        dbg.location(82, 0);
 
         try {
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:73:15: ( EQUAL_SIGN EQUAL_SIGN EQUAL_SIGN )
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:82:15: ( EQUAL_SIGN EQUAL_SIGN EQUAL_SIGN )
             dbg.enterAlt(1);
 
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:73:17: EQUAL_SIGN EQUAL_SIGN EQUAL_SIGN
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:82:17: EQUAL_SIGN EQUAL_SIGN EQUAL_SIGN
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            dbg.location(73,17);
+            dbg.location(82,17);
             EQUAL_SIGN3=(Token)match(input,EQUAL_SIGN,FOLLOW_EQUAL_SIGN_in_equality_line157); 
             EQUAL_SIGN3_tree = 
             (CommonTree)adaptor.create(EQUAL_SIGN3)
             ;
             adaptor.addChild(root_0, EQUAL_SIGN3_tree);
 
-            dbg.location(73,28);
+            dbg.location(82,28);
             EQUAL_SIGN4=(Token)match(input,EQUAL_SIGN,FOLLOW_EQUAL_SIGN_in_equality_line159); 
             EQUAL_SIGN4_tree = 
             (CommonTree)adaptor.create(EQUAL_SIGN4)
             ;
             adaptor.addChild(root_0, EQUAL_SIGN4_tree);
 
-            dbg.location(73,39);
+            dbg.location(82,39);
             EQUAL_SIGN5=(Token)match(input,EQUAL_SIGN,FOLLOW_EQUAL_SIGN_in_equality_line161); 
             EQUAL_SIGN5_tree = 
             (CommonTree)adaptor.create(EQUAL_SIGN5)
@@ -641,7 +650,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(73, 48);
+        dbg.location(82, 48);
 
         }
         finally {
@@ -662,7 +671,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "char_string"
-    // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:75:1: char_string : ( CHAR )+ -> ^( INPUT_STRING ( CHAR )+ ) ;
+    // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:84:1: char_string : ( CHAR )+ -> ^( INPUT_STRING ( CHAR )+ ) ;
     public final buchstabenGrammarParser.char_string_return char_string() throws RecognitionException {
         buchstabenGrammarParser.char_string_return retval = new buchstabenGrammarParser.char_string_return();
         retval.start = input.LT(1);
@@ -678,16 +687,16 @@ public TreeAdaptor getTreeAdaptor() {
         try { dbg.enterRule(getGrammarFileName(), "char_string");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(75, 0);
+        dbg.location(84, 0);
 
         try {
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:75:13: ( ( CHAR )+ -> ^( INPUT_STRING ( CHAR )+ ) )
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:84:13: ( ( CHAR )+ -> ^( INPUT_STRING ( CHAR )+ ) )
             dbg.enterAlt(1);
 
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:75:15: ( CHAR )+
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:84:15: ( CHAR )+
             {
-            dbg.location(75,15);
-            // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:75:15: ( CHAR )+
+            dbg.location(84,15);
+            // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:84:15: ( CHAR )+
             int cnt1=0;
             try { dbg.enterSubRule(1);
 
@@ -709,9 +718,9 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:75:15: CHAR
+            	    // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:84:15: CHAR
             	    {
-            	    dbg.location(75,15);
+            	    dbg.location(84,15);
             	    CHAR6=(Token)match(input,CHAR,FOLLOW_CHAR_in_char_string169);  
             	    stream_CHAR.add(CHAR6);
 
@@ -743,23 +752,23 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 75:21: -> ^( INPUT_STRING ( CHAR )+ )
+            // 84:21: -> ^( INPUT_STRING ( CHAR )+ )
             {
-                dbg.location(75,24);
-                // C:\\Users\\abq308\\Desktop\\CI\\Buchstaben\\buchstabenGrammar.g:75:24: ^( INPUT_STRING ( CHAR )+ )
+                dbg.location(84,24);
+                // C:\\Users\\abq308.INFORMATIK\\Desktop\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:84:24: ^( INPUT_STRING ( CHAR )+ )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
-                dbg.location(75,26);
+                dbg.location(84,26);
                 root_1 = (CommonTree)adaptor.becomeRoot(
                 (CommonTree)adaptor.create(INPUT_STRING, "INPUT_STRING")
                 , root_1);
 
-                dbg.location(75,39);
+                dbg.location(84,39);
                 if ( !(stream_CHAR.hasNext()) ) {
                     throw new RewriteEarlyExitException();
                 }
                 while ( stream_CHAR.hasNext() ) {
-                    dbg.location(75,39);
+                    dbg.location(84,39);
                     adaptor.addChild(root_1, 
                     stream_CHAR.nextNode()
                     );
@@ -794,7 +803,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(75, 44);
+        dbg.location(84, 44);
 
         }
         finally {

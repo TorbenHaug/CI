@@ -12,12 +12,21 @@ tokens{
 	private CommonTree getSubtree(String op, Tree left, Tree middle, Tree right) {
 		CommonTree result = (CommonTree) adaptor.create(EQUAL_SIGN, "=");
 		
-		CommonTree term = (CommonTree) adaptor.create(PLUS_MINUS_SIGN, op);
-		adaptor.addChild(term, left);
-		adaptor.addChild(term, middle);
-		
-		adaptor.addChild(result, term);
-		adaptor.addChild(result, right); 
+		if (op.equals("+")) {
+			CommonTree term = (CommonTree) adaptor.create(PLUS_MINUS_SIGN, "+");
+			adaptor.addChild(term, left);
+			adaptor.addChild(term, middle);
+			
+			adaptor.addChild(result, term);
+			adaptor.addChild(result, right);
+		} else {
+			CommonTree term = (CommonTree) adaptor.create(PLUS_MINUS_SIGN, "+");
+			adaptor.addChild(term, right);
+			adaptor.addChild(term, middle);
+			
+			adaptor.addChild(result, term);
+			adaptor.addChild(result, left);
+		}
 		
 		return result;
 	}
