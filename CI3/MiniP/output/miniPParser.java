@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g 2014-11-20 16:43:51
+// $ANTLR 3.4 Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g 2014-11-20 16:45:58
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -61,9 +61,9 @@ public class miniPParser extends DebugParser {
 
 
 public static final String[] ruleNames = new String[] {
-    "invalidRule", "anweisung", "condition", "programmcode", "zuweisungswert", 
-    "declarations", "arithausdr", "term", "read", "product", "vergleich", 
-    "println", "schleife", "number", "start", "declaration", "zuweisung"
+    "invalidRule", "declarations", "read", "arithausdr", "schleife", "product", 
+    "zuweisung", "zuweisungswert", "term", "start", "declaration", "vergleich", 
+    "number", "anweisung", "println", "condition", "programmcode"
 };
 
 public static final boolean[] decisionCanBacktrack = new boolean[] {
@@ -122,7 +122,7 @@ public TreeAdaptor getTreeAdaptor() {
 }
 
     public String[] getTokenNames() { return miniPParser.tokenNames; }
-    public String getGrammarFileName() { return "Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g"; }
+    public String getGrammarFileName() { return "Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g"; }
 
 
     public static class start_return extends ParserRuleReturnScope {
@@ -132,7 +132,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "start"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:13:1: start : PROGRAMSYMBOL declaration BEGINSYMBOL programmcode ENDSYMBOL -> ^( START declaration programmcode ) ;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:13:1: start : PROGRAMSYMBOL declaration BEGINSYMBOL programmcode ENDSYMBOL -> ^( START declaration programmcode ) ;
     public final miniPParser.start_return start() throws RecognitionException {
         miniPParser.start_return retval = new miniPParser.start_return();
         retval.start = input.LT(1);
@@ -162,10 +162,10 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(13, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:13:6: ( PROGRAMSYMBOL declaration BEGINSYMBOL programmcode ENDSYMBOL -> ^( START declaration programmcode ) )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:13:6: ( PROGRAMSYMBOL declaration BEGINSYMBOL programmcode ENDSYMBOL -> ^( START declaration programmcode ) )
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:14:10: PROGRAMSYMBOL declaration BEGINSYMBOL programmcode ENDSYMBOL
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:14:10: PROGRAMSYMBOL declaration BEGINSYMBOL programmcode ENDSYMBOL
             {
             dbg.location(14,10);
             PROGRAMSYMBOL1=(Token)match(input,PROGRAMSYMBOL,FOLLOW_PROGRAMSYMBOL_in_start52);  
@@ -195,7 +195,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: declaration, programmcode
+            // elements: programmcode, declaration
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -208,7 +208,7 @@ public TreeAdaptor getTreeAdaptor() {
             // 18:20: -> ^( START declaration programmcode )
             {
                 dbg.location(18,23);
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:18:23: ^( START declaration programmcode )
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:18:23: ^( START declaration programmcode )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 dbg.location(18,25);
@@ -269,7 +269,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "declaration"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:20:1: declaration : ( declarations )* -> ^( DECLARATION ( declarations )* ) ;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:20:1: declaration : ( declarations )* -> ^( DECLARATION ( declarations )* ) ;
     public final miniPParser.declaration_return declaration() throws RecognitionException {
         miniPParser.declaration_return retval = new miniPParser.declaration_return();
         retval.start = input.LT(1);
@@ -287,13 +287,13 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(20, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:20:13: ( ( declarations )* -> ^( DECLARATION ( declarations )* ) )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:20:13: ( ( declarations )* -> ^( DECLARATION ( declarations )* ) )
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:20:15: ( declarations )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:20:15: ( declarations )*
             {
             dbg.location(20,15);
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:20:15: ( declarations )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:20:15: ( declarations )*
             try { dbg.enterSubRule(1);
 
             loop1:
@@ -314,7 +314,7 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:20:15: declarations
+            	    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:20:15: declarations
             	    {
             	    dbg.location(20,15);
             	    pushFollow(FOLLOW_declarations_in_declaration122);
@@ -348,7 +348,7 @@ public TreeAdaptor getTreeAdaptor() {
             // 20:29: -> ^( DECLARATION ( declarations )* )
             {
                 dbg.location(20,32);
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:20:32: ^( DECLARATION ( declarations )* )
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:20:32: ^( DECLARATION ( declarations )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 dbg.location(20,34);
@@ -357,7 +357,7 @@ public TreeAdaptor getTreeAdaptor() {
                 , root_1);
 
                 dbg.location(20,46);
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:20:46: ( declarations )*
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:20:46: ( declarations )*
                 while ( stream_declarations.hasNext() ) {
                     dbg.location(20,46);
                     adaptor.addChild(root_1, stream_declarations.nextTree());
@@ -413,7 +413,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "declarations"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:21:1: declarations : ( CONSTANTSYMBOL ID ( LISTCUTSYMBOL ID )* CMDENDSYMBOL ) -> ^( CONSTANTSYMBOL ( ID )* ) ;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:21:1: declarations : ( CONSTANTSYMBOL ID ( LISTCUTSYMBOL ID )* CMDENDSYMBOL ) -> ^( CONSTANTSYMBOL ( ID )* ) ;
     public final miniPParser.declarations_return declarations() throws RecognitionException {
         miniPParser.declarations_return retval = new miniPParser.declarations_return();
         retval.start = input.LT(1);
@@ -443,16 +443,16 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(21, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:21:15: ( ( CONSTANTSYMBOL ID ( LISTCUTSYMBOL ID )* CMDENDSYMBOL ) -> ^( CONSTANTSYMBOL ( ID )* ) )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:21:15: ( ( CONSTANTSYMBOL ID ( LISTCUTSYMBOL ID )* CMDENDSYMBOL ) -> ^( CONSTANTSYMBOL ( ID )* ) )
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:21:17: ( CONSTANTSYMBOL ID ( LISTCUTSYMBOL ID )* CMDENDSYMBOL )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:21:17: ( CONSTANTSYMBOL ID ( LISTCUTSYMBOL ID )* CMDENDSYMBOL )
             {
             dbg.location(21,17);
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:21:17: ( CONSTANTSYMBOL ID ( LISTCUTSYMBOL ID )* CMDENDSYMBOL )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:21:17: ( CONSTANTSYMBOL ID ( LISTCUTSYMBOL ID )* CMDENDSYMBOL )
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:21:18: CONSTANTSYMBOL ID ( LISTCUTSYMBOL ID )* CMDENDSYMBOL
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:21:18: CONSTANTSYMBOL ID ( LISTCUTSYMBOL ID )* CMDENDSYMBOL
             {
             dbg.location(21,18);
             CONSTANTSYMBOL7=(Token)match(input,CONSTANTSYMBOL,FOLLOW_CONSTANTSYMBOL_in_declarations141);  
@@ -463,7 +463,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_ID.add(ID8);
 
             dbg.location(21,36);
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:21:36: ( LISTCUTSYMBOL ID )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:21:36: ( LISTCUTSYMBOL ID )*
             try { dbg.enterSubRule(2);
 
             loop2:
@@ -484,7 +484,7 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:21:37: LISTCUTSYMBOL ID
+            	    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:21:37: LISTCUTSYMBOL ID
             	    {
             	    dbg.location(21,37);
             	    LISTCUTSYMBOL9=(Token)match(input,LISTCUTSYMBOL,FOLLOW_LISTCUTSYMBOL_in_declarations146);  
@@ -513,7 +513,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: ID, CONSTANTSYMBOL
+            // elements: CONSTANTSYMBOL, ID
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -526,7 +526,7 @@ public TreeAdaptor getTreeAdaptor() {
             // 21:70: -> ^( CONSTANTSYMBOL ( ID )* )
             {
                 dbg.location(21,73);
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:21:73: ^( CONSTANTSYMBOL ( ID )* )
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:21:73: ^( CONSTANTSYMBOL ( ID )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 dbg.location(21,75);
@@ -535,7 +535,7 @@ public TreeAdaptor getTreeAdaptor() {
                 , root_1);
 
                 dbg.location(21,90);
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:21:90: ( ID )*
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:21:90: ( ID )*
                 while ( stream_ID.hasNext() ) {
                     dbg.location(21,90);
                     adaptor.addChild(root_1, 
@@ -593,7 +593,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "programmcode"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:24:1: programmcode : ( anweisung )* -> ^( PROGRAMMCODE ( anweisung )* ) ;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:24:1: programmcode : ( anweisung )* -> ^( PROGRAMMCODE ( anweisung )* ) ;
     public final miniPParser.programmcode_return programmcode() throws RecognitionException {
         miniPParser.programmcode_return retval = new miniPParser.programmcode_return();
         retval.start = input.LT(1);
@@ -611,13 +611,13 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(24, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:24:15: ( ( anweisung )* -> ^( PROGRAMMCODE ( anweisung )* ) )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:24:15: ( ( anweisung )* -> ^( PROGRAMMCODE ( anweisung )* ) )
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:24:17: ( anweisung )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:24:17: ( anweisung )*
             {
             dbg.location(24,17);
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:24:17: ( anweisung )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:24:17: ( anweisung )*
             try { dbg.enterSubRule(3);
 
             loop3:
@@ -638,7 +638,7 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:24:17: anweisung
+            	    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:24:17: anweisung
             	    {
             	    dbg.location(24,17);
             	    pushFollow(FOLLOW_anweisung_in_programmcode172);
@@ -672,7 +672,7 @@ public TreeAdaptor getTreeAdaptor() {
             // 24:28: -> ^( PROGRAMMCODE ( anweisung )* )
             {
                 dbg.location(24,31);
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:24:31: ^( PROGRAMMCODE ( anweisung )* )
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:24:31: ^( PROGRAMMCODE ( anweisung )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 dbg.location(24,33);
@@ -681,7 +681,7 @@ public TreeAdaptor getTreeAdaptor() {
                 , root_1);
 
                 dbg.location(24,46);
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:24:46: ( anweisung )*
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:24:46: ( anweisung )*
                 while ( stream_anweisung.hasNext() ) {
                     dbg.location(24,46);
                     adaptor.addChild(root_1, stream_anweisung.nextTree());
@@ -737,7 +737,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "anweisung"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:25:1: anweisung : ( zuweisung | condition | schleife | println | read );
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:25:1: anweisung : ( zuweisung | condition | schleife | println | read );
     public final miniPParser.anweisung_return anweisung() throws RecognitionException {
         miniPParser.anweisung_return retval = new miniPParser.anweisung_return();
         retval.start = input.LT(1);
@@ -763,7 +763,7 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(25, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:25:12: ( zuweisung | condition | schleife | println | read )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:25:12: ( zuweisung | condition | schleife | println | read )
             int alt4=5;
             try { dbg.enterDecision(4, decisionCanBacktrack[4]);
 
@@ -808,7 +808,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:25:14: zuweisung
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:25:14: zuweisung
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -826,7 +826,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:25:26: condition
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:25:26: condition
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -844,7 +844,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:25:38: schleife
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:25:38: schleife
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -862,7 +862,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:25:49: println
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:25:49: println
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -880,7 +880,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 5 :
                     dbg.enterAlt(5);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:25:59: read
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:25:59: read
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -935,7 +935,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "zuweisung"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:29:1: zuweisung : ID ZUWEISUNGSSYMBOL ^ zuweisungswert CMDENDSYMBOL !;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:29:1: zuweisung : ID ZUWEISUNGSSYMBOL ^ zuweisungswert CMDENDSYMBOL !;
     public final miniPParser.zuweisung_return zuweisung() throws RecognitionException {
         miniPParser.zuweisung_return retval = new miniPParser.zuweisung_return();
         retval.start = input.LT(1);
@@ -959,10 +959,10 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(29, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:29:12: ( ID ZUWEISUNGSSYMBOL ^ zuweisungswert CMDENDSYMBOL !)
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:29:12: ( ID ZUWEISUNGSSYMBOL ^ zuweisungswert CMDENDSYMBOL !)
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:29:14: ID ZUWEISUNGSSYMBOL ^ zuweisungswert CMDENDSYMBOL !
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:29:14: ID ZUWEISUNGSSYMBOL ^ zuweisungswert CMDENDSYMBOL !
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1031,7 +1031,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "zuweisungswert"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:30:1: zuweisungswert : ( STRINGCONST | BOOLEANCONST | vergleich | arithausdr );
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:30:1: zuweisungswert : ( STRINGCONST | BOOLEANCONST | vergleich | arithausdr );
     public final miniPParser.zuweisungswert_return zuweisungswert() throws RecognitionException {
         miniPParser.zuweisungswert_return retval = new miniPParser.zuweisungswert_return();
         retval.start = input.LT(1);
@@ -1055,7 +1055,7 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(30, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:30:17: ( STRINGCONST | BOOLEANCONST | vergleich | arithausdr )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:30:17: ( STRINGCONST | BOOLEANCONST | vergleich | arithausdr )
             int alt5=4;
             try { dbg.enterDecision(5, decisionCanBacktrack[5]);
 
@@ -1131,7 +1131,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:30:19: STRINGCONST
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:30:19: STRINGCONST
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1149,7 +1149,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:30:33: BOOLEANCONST
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:30:33: BOOLEANCONST
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1167,7 +1167,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:30:48: vergleich
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:30:48: vergleich
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1185,7 +1185,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:30:60: arithausdr
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:30:60: arithausdr
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -1240,7 +1240,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "condition"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:33:1: condition : IFSYMBOL ^ vergleich THENSYMBOL ! programmcode ( ELSESYMBOL ! programmcode )? FISYMBOL !;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:33:1: condition : IFSYMBOL ^ vergleich THENSYMBOL ! programmcode ( ELSESYMBOL ! programmcode )? FISYMBOL !;
     public final miniPParser.condition_return condition() throws RecognitionException {
         miniPParser.condition_return retval = new miniPParser.condition_return();
         retval.start = input.LT(1);
@@ -1270,10 +1270,10 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(33, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:33:12: ( IFSYMBOL ^ vergleich THENSYMBOL ! programmcode ( ELSESYMBOL ! programmcode )? FISYMBOL !)
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:33:12: ( IFSYMBOL ^ vergleich THENSYMBOL ! programmcode ( ELSESYMBOL ! programmcode )? FISYMBOL !)
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:33:14: IFSYMBOL ^ vergleich THENSYMBOL ! programmcode ( ELSESYMBOL ! programmcode )? FISYMBOL !
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:33:14: IFSYMBOL ^ vergleich THENSYMBOL ! programmcode ( ELSESYMBOL ! programmcode )? FISYMBOL !
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1302,7 +1302,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, programmcode29.getTree());
             dbg.location(33,59);
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:33:59: ( ELSESYMBOL ! programmcode )?
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:33:59: ( ELSESYMBOL ! programmcode )?
             int alt6=2;
             try { dbg.enterSubRule(6);
             try { dbg.enterDecision(6, decisionCanBacktrack[6]);
@@ -1318,7 +1318,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:33:60: ELSESYMBOL ! programmcode
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:33:60: ELSESYMBOL ! programmcode
                     {
                     dbg.location(33,70);
                     ELSESYMBOL30=(Token)match(input,ELSESYMBOL,FOLLOW_ELSESYMBOL_in_condition267); 
@@ -1379,7 +1379,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "vergleich"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:36:1: vergleich : ( number | ID ) VERGLEICHSSYMBOL ^ ( number | ID ) ;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:36:1: vergleich : ( number | ID ) VERGLEICHSSYMBOL ^ ( number | ID ) ;
     public final miniPParser.vergleich_return vergleich() throws RecognitionException {
         miniPParser.vergleich_return retval = new miniPParser.vergleich_return();
         retval.start = input.LT(1);
@@ -1405,16 +1405,16 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(36, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:36:12: ( ( number | ID ) VERGLEICHSSYMBOL ^ ( number | ID ) )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:36:12: ( ( number | ID ) VERGLEICHSSYMBOL ^ ( number | ID ) )
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:36:15: ( number | ID ) VERGLEICHSSYMBOL ^ ( number | ID )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:36:15: ( number | ID ) VERGLEICHSSYMBOL ^ ( number | ID )
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
             dbg.location(36,15);
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:36:15: ( number | ID )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:36:15: ( number | ID )
             int alt7=2;
             try { dbg.enterSubRule(7);
             try { dbg.enterDecision(7, decisionCanBacktrack[7]);
@@ -1441,7 +1441,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:36:16: number
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:36:16: number
                     {
                     dbg.location(36,16);
                     pushFollow(FOLLOW_number_in_vergleich287);
@@ -1456,7 +1456,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:36:25: ID
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:36:25: ID
                     {
                     dbg.location(36,25);
                     ID34=(Token)match(input,ID,FOLLOW_ID_in_vergleich291); 
@@ -1480,7 +1480,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (CommonTree)adaptor.becomeRoot(VERGLEICHSSYMBOL35_tree, root_0);
 
             dbg.location(36,47);
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:36:47: ( number | ID )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:36:47: ( number | ID )
             int alt8=2;
             try { dbg.enterSubRule(8);
             try { dbg.enterDecision(8, decisionCanBacktrack[8]);
@@ -1507,7 +1507,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:36:48: number
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:36:48: number
                     {
                     dbg.location(36,48);
                     pushFollow(FOLLOW_number_in_vergleich298);
@@ -1522,7 +1522,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:36:57: ID
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:36:57: ID
                     {
                     dbg.location(36,57);
                     ID37=(Token)match(input,ID,FOLLOW_ID_in_vergleich302); 
@@ -1579,7 +1579,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "schleife"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:39:1: schleife : WHILESYMBOL ^ vergleich DOSYMBOL ! programmcode ODSYMBOL !;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:39:1: schleife : WHILESYMBOL ^ vergleich DOSYMBOL ! programmcode ODSYMBOL !;
     public final miniPParser.schleife_return schleife() throws RecognitionException {
         miniPParser.schleife_return retval = new miniPParser.schleife_return();
         retval.start = input.LT(1);
@@ -1605,10 +1605,10 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(39, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:39:10: ( WHILESYMBOL ^ vergleich DOSYMBOL ! programmcode ODSYMBOL !)
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:39:10: ( WHILESYMBOL ^ vergleich DOSYMBOL ! programmcode ODSYMBOL !)
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:39:12: WHILESYMBOL ^ vergleich DOSYMBOL ! programmcode ODSYMBOL !
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:39:12: WHILESYMBOL ^ vergleich DOSYMBOL ! programmcode ODSYMBOL !
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1679,7 +1679,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "number"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:41:1: number : ( REALCONST | INTEGERCONST );
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:41:1: number : ( REALCONST | INTEGERCONST );
     public final miniPParser.number_return number() throws RecognitionException {
         miniPParser.number_return retval = new miniPParser.number_return();
         retval.start = input.LT(1);
@@ -1697,10 +1697,10 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(41, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:41:10: ( REALCONST | INTEGERCONST )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:41:10: ( REALCONST | INTEGERCONST )
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1762,7 +1762,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "println"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:44:1: println : PRINTLNSYMBOL ^ KLAMMERAUFSYMBOL ! zuweisungswert KLAMMERZUSYMBOL ! CMDENDSYMBOL !;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:44:1: println : PRINTLNSYMBOL ^ KLAMMERAUFSYMBOL ! zuweisungswert KLAMMERZUSYMBOL ! CMDENDSYMBOL !;
     public final miniPParser.println_return println() throws RecognitionException {
         miniPParser.println_return retval = new miniPParser.println_return();
         retval.start = input.LT(1);
@@ -1788,10 +1788,10 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(44, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:44:10: ( PRINTLNSYMBOL ^ KLAMMERAUFSYMBOL ! zuweisungswert KLAMMERZUSYMBOL ! CMDENDSYMBOL !)
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:44:10: ( PRINTLNSYMBOL ^ KLAMMERAUFSYMBOL ! zuweisungswert KLAMMERZUSYMBOL ! CMDENDSYMBOL !)
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:44:12: PRINTLNSYMBOL ^ KLAMMERAUFSYMBOL ! zuweisungswert KLAMMERZUSYMBOL ! CMDENDSYMBOL !
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:44:12: PRINTLNSYMBOL ^ KLAMMERAUFSYMBOL ! zuweisungswert KLAMMERZUSYMBOL ! CMDENDSYMBOL !
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1857,7 +1857,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "read"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:47:1: read : READSYMBOL ^ KLAMMERAUFSYMBOL ! ID KLAMMERZUSYMBOL ! CMDENDSYMBOL !;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:47:1: read : READSYMBOL ^ KLAMMERAUFSYMBOL ! ID KLAMMERZUSYMBOL ! CMDENDSYMBOL !;
     public final miniPParser.read_return read() throws RecognitionException {
         miniPParser.read_return retval = new miniPParser.read_return();
         retval.start = input.LT(1);
@@ -1883,10 +1883,10 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(47, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:47:7: ( READSYMBOL ^ KLAMMERAUFSYMBOL ! ID KLAMMERZUSYMBOL ! CMDENDSYMBOL !)
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:47:7: ( READSYMBOL ^ KLAMMERAUFSYMBOL ! ID KLAMMERZUSYMBOL ! CMDENDSYMBOL !)
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:47:9: READSYMBOL ^ KLAMMERAUFSYMBOL ! ID KLAMMERZUSYMBOL ! CMDENDSYMBOL !
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:47:9: READSYMBOL ^ KLAMMERAUFSYMBOL ! ID KLAMMERZUSYMBOL ! CMDENDSYMBOL !
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1952,7 +1952,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "arithausdr"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:49:1: arithausdr : product ( PLUSMINUSSYMBOL ^ product )* ;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:49:1: arithausdr : product ( PLUSMINUSSYMBOL ^ product )* ;
     public final miniPParser.arithausdr_return arithausdr() throws RecognitionException {
         miniPParser.arithausdr_return retval = new miniPParser.arithausdr_return();
         retval.start = input.LT(1);
@@ -1974,10 +1974,10 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(49, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:49:17: ( product ( PLUSMINUSSYMBOL ^ product )* )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:49:17: ( product ( PLUSMINUSSYMBOL ^ product )* )
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:49:19: product ( PLUSMINUSSYMBOL ^ product )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:49:19: product ( PLUSMINUSSYMBOL ^ product )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1990,7 +1990,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, product54.getTree());
             dbg.location(49,27);
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:49:27: ( PLUSMINUSSYMBOL ^ product )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:49:27: ( PLUSMINUSSYMBOL ^ product )*
             try { dbg.enterSubRule(9);
 
             loop9:
@@ -2011,7 +2011,7 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:49:28: PLUSMINUSSYMBOL ^ product
+            	    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:49:28: PLUSMINUSSYMBOL ^ product
             	    {
             	    dbg.location(49,43);
             	    PLUSMINUSSYMBOL55=(Token)match(input,PLUSMINUSSYMBOL,FOLLOW_PLUSMINUSSYMBOL_in_arithausdr399); 
@@ -2078,7 +2078,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "product"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:50:1: product : term ( MALGETEILTSYMBOL ^ term )* ;
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:50:1: product : term ( MALGETEILTSYMBOL ^ term )* ;
     public final miniPParser.product_return product() throws RecognitionException {
         miniPParser.product_return retval = new miniPParser.product_return();
         retval.start = input.LT(1);
@@ -2100,10 +2100,10 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(50, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:50:17: ( term ( MALGETEILTSYMBOL ^ term )* )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:50:17: ( term ( MALGETEILTSYMBOL ^ term )* )
             dbg.enterAlt(1);
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:50:19: term ( MALGETEILTSYMBOL ^ term )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:50:19: term ( MALGETEILTSYMBOL ^ term )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -2116,7 +2116,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, term57.getTree());
             dbg.location(50,24);
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:50:24: ( MALGETEILTSYMBOL ^ term )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:50:24: ( MALGETEILTSYMBOL ^ term )*
             try { dbg.enterSubRule(10);
 
             loop10:
@@ -2137,7 +2137,7 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:50:25: MALGETEILTSYMBOL ^ term
+            	    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:50:25: MALGETEILTSYMBOL ^ term
             	    {
             	    dbg.location(50,41);
             	    MALGETEILTSYMBOL58=(Token)match(input,MALGETEILTSYMBOL,FOLLOW_MALGETEILTSYMBOL_in_product422); 
@@ -2204,7 +2204,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "term"
-    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:51:1: term : ( ID | number | KLAMMERAUFSYMBOL ! arithausdr KLAMMERZUSYMBOL !);
+    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:51:1: term : ( ID | number | KLAMMERAUFSYMBOL ! arithausdr KLAMMERZUSYMBOL !);
     public final miniPParser.term_return term() throws RecognitionException {
         miniPParser.term_return retval = new miniPParser.term_return();
         retval.start = input.LT(1);
@@ -2230,7 +2230,7 @@ public TreeAdaptor getTreeAdaptor() {
         dbg.location(51, 0);
 
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:51:17: ( ID | number | KLAMMERAUFSYMBOL ! arithausdr KLAMMERZUSYMBOL !)
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:51:17: ( ID | number | KLAMMERAUFSYMBOL ! arithausdr KLAMMERZUSYMBOL !)
             int alt11=3;
             try { dbg.enterDecision(11, decisionCanBacktrack[11]);
 
@@ -2266,7 +2266,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:51:19: ID
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:51:19: ID
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -2284,7 +2284,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:51:24: number
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:51:24: number
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -2302,7 +2302,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:51:33: KLAMMERAUFSYMBOL ! arithausdr KLAMMERZUSYMBOL !
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:51:33: KLAMMERAUFSYMBOL ! arithausdr KLAMMERZUSYMBOL !
                     {
                     root_0 = (CommonTree)adaptor.nil();
 

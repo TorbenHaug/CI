@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g 2014-11-20 16:43:52
+// $ANTLR 3.4 Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g 2014-11-20 16:45:58
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -56,15 +56,15 @@ public class miniPLexer extends Lexer {
     public miniPLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g"; }
+    public String getGrammarFileName() { return "Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g"; }
 
     // $ANTLR start "PROGRAMSYMBOL"
     public final void mPROGRAMSYMBOL() throws RecognitionException {
         try {
             int _type = PROGRAMSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:53:16: ( 'program' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:53:18: 'program'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:53:16: ( 'program' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:53:18: 'program'
             {
             match("program"); 
 
@@ -86,8 +86,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = BEGINSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:54:14: ( 'begin' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:54:16: 'begin'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:54:14: ( 'begin' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:54:16: 'begin'
             {
             match("begin"); 
 
@@ -109,8 +109,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = ENDSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:55:11: ( 'end' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:55:13: 'end'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:55:11: ( 'end' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:55:13: 'end'
             {
             match("end"); 
 
@@ -132,8 +132,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = IFSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:56:11: ( 'if' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:56:13: 'if'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:56:11: ( 'if' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:56:13: 'if'
             {
             match("if"); 
 
@@ -155,8 +155,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = THENSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:57:13: ( 'then' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:57:15: 'then'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:57:13: ( 'then' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:57:15: 'then'
             {
             match("then"); 
 
@@ -178,8 +178,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = ELSESYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:58:13: ( 'else' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:58:15: 'else'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:58:13: ( 'else' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:58:15: 'else'
             {
             match("else"); 
 
@@ -201,8 +201,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = FISYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:59:10: ( 'fi' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:59:12: 'fi'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:59:10: ( 'fi' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:59:12: 'fi'
             {
             match("fi"); 
 
@@ -224,8 +224,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = WHILESYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:60:14: ( 'while' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:60:16: 'while'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:60:14: ( 'while' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:60:16: 'while'
             {
             match("while"); 
 
@@ -247,8 +247,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = DOSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:61:10: ( 'do' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:61:12: 'do'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:61:10: ( 'do' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:61:12: 'do'
             {
             match("do"); 
 
@@ -270,8 +270,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = ODSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:62:10: ( 'od' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:62:12: 'od'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:62:10: ( 'od' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:62:12: 'od'
             {
             match("od"); 
 
@@ -293,8 +293,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = PRINTLNSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:63:16: ( 'println' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:63:18: 'println'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:63:16: ( 'println' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:63:18: 'println'
             {
             match("println"); 
 
@@ -316,8 +316,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = READSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:64:12: ( 'read' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:64:14: 'read'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:64:12: ( 'read' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:64:14: 'read'
             {
             match("read"); 
 
@@ -339,8 +339,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = ZUWEISUNGSSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:66:18: ( ':=' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:66:20: ':='
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:66:18: ( ':=' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:66:20: ':='
             {
             match(":="); 
 
@@ -362,7 +362,7 @@ public class miniPLexer extends Lexer {
         try {
             int _type = VERGLEICHSSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:67:18: ( '<' | '<=' | '=' | '<>' | '>=' | '>' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:67:18: ( '<' | '<=' | '=' | '<>' | '>=' | '>' )
             int alt1=6;
             switch ( input.LA(1) ) {
             case '<':
@@ -411,14 +411,14 @@ public class miniPLexer extends Lexer {
 
             switch (alt1) {
                 case 1 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:67:20: '<'
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:67:20: '<'
                     {
                     match('<'); 
 
                     }
                     break;
                 case 2 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:67:26: '<='
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:67:26: '<='
                     {
                     match("<="); 
 
@@ -427,14 +427,14 @@ public class miniPLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:67:33: '='
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:67:33: '='
                     {
                     match('='); 
 
                     }
                     break;
                 case 4 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:67:39: '<>'
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:67:39: '<>'
                     {
                     match("<>"); 
 
@@ -443,7 +443,7 @@ public class miniPLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:67:46: '>='
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:67:46: '>='
                     {
                     match(">="); 
 
@@ -452,7 +452,7 @@ public class miniPLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:67:53: '>'
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:67:53: '>'
                     {
                     match('>'); 
 
@@ -474,8 +474,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = KLAMMERAUFSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:68:18: ( '(' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:68:20: '('
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:68:18: ( '(' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:68:20: '('
             {
             match('('); 
 
@@ -495,8 +495,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = KLAMMERZUSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:69:17: ( ')' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:69:19: ')'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:69:17: ( ')' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:69:19: ')'
             {
             match(')'); 
 
@@ -516,7 +516,7 @@ public class miniPLexer extends Lexer {
         try {
             int _type = CONSTANTSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:70:17: ( 'string' | 'integer' | 'real' | 'boolean' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:70:17: ( 'string' | 'integer' | 'real' | 'boolean' )
             int alt2=4;
             switch ( input.LA(1) ) {
             case 's':
@@ -549,7 +549,7 @@ public class miniPLexer extends Lexer {
 
             switch (alt2) {
                 case 1 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:70:19: 'string'
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:70:19: 'string'
                     {
                     match("string"); 
 
@@ -558,7 +558,7 @@ public class miniPLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:70:30: 'integer'
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:70:30: 'integer'
                     {
                     match("integer"); 
 
@@ -567,7 +567,7 @@ public class miniPLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:70:42: 'real'
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:70:42: 'real'
                     {
                     match("real"); 
 
@@ -576,7 +576,7 @@ public class miniPLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:70:50: 'boolean'
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:70:50: 'boolean'
                     {
                     match("boolean"); 
 
@@ -600,8 +600,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = PLUSMINUSSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:71:17: ( '+' | '-' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:71:17: ( '+' | '-' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:
             {
             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                 input.consume();
@@ -629,8 +629,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = MALGETEILTSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:72:18: ( '*' | '/' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:72:18: ( '*' | '/' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:
             {
             if ( input.LA(1)=='*'||input.LA(1)=='/' ) {
                 input.consume();
@@ -658,8 +658,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = LISTCUTSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:73:16: ( ',' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:73:18: ','
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:73:16: ( ',' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:73:18: ','
             {
             match(','); 
 
@@ -679,8 +679,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = CMDENDSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:74:15: ( ';' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:74:17: ';'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:74:15: ( ';' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:74:17: ';'
             {
             match(';'); 
 
@@ -700,8 +700,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = REALCUTSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:75:17: ( '.' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:75:19: '.'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:75:17: ( '.' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:75:19: '.'
             {
             match('.'); 
 
@@ -719,10 +719,10 @@ public class miniPLexer extends Lexer {
     // $ANTLR start "UNSIGNEDINTEGERCONST"
     public final void mUNSIGNEDINTEGERCONST() throws RecognitionException {
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:78:32: ( ( DIGIT )+ )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:78:34: ( DIGIT )+
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:78:32: ( ( DIGIT )+ )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:78:34: ( DIGIT )+
             {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:78:34: ( DIGIT )+
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:78:34: ( DIGIT )+
             int cnt3=0;
             loop3:
             do {
@@ -736,7 +736,7 @@ public class miniPLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:
+            	    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -776,7 +776,7 @@ public class miniPLexer extends Lexer {
         try {
             int _type = BOOLEANCONST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:79:14: ( 'true' | 'false' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:79:14: ( 'true' | 'false' )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -795,7 +795,7 @@ public class miniPLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:79:16: 'true'
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:79:16: 'true'
                     {
                     match("true"); 
 
@@ -804,7 +804,7 @@ public class miniPLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:79:25: 'false'
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:79:25: 'false'
                     {
                     match("false"); 
 
@@ -828,10 +828,10 @@ public class miniPLexer extends Lexer {
         try {
             int _type = INTEGERCONST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:80:22: ( ( PLUSMINUSSYMBOL )? UNSIGNEDINTEGERCONST )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:80:24: ( PLUSMINUSSYMBOL )? UNSIGNEDINTEGERCONST
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:80:22: ( ( PLUSMINUSSYMBOL )? UNSIGNEDINTEGERCONST )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:80:24: ( PLUSMINUSSYMBOL )? UNSIGNEDINTEGERCONST
             {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:80:24: ( PLUSMINUSSYMBOL )?
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:80:24: ( PLUSMINUSSYMBOL )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -840,7 +840,7 @@ public class miniPLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:
                     {
                     if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                         input.consume();
@@ -877,8 +877,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = REALCONST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:82:22: ( INTEGERCONST REALCUTSYMBOL ( UNSIGNEDINTEGERCONST )? )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:82:24: INTEGERCONST REALCUTSYMBOL ( UNSIGNEDINTEGERCONST )?
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:82:22: ( INTEGERCONST REALCUTSYMBOL ( UNSIGNEDINTEGERCONST )? )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:82:24: INTEGERCONST REALCUTSYMBOL ( UNSIGNEDINTEGERCONST )?
             {
             mINTEGERCONST(); 
 
@@ -886,7 +886,7 @@ public class miniPLexer extends Lexer {
             mREALCUTSYMBOL(); 
 
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:82:51: ( UNSIGNEDINTEGERCONST )?
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:82:51: ( UNSIGNEDINTEGERCONST )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -895,7 +895,7 @@ public class miniPLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:82:51: UNSIGNEDINTEGERCONST
+                    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:82:51: UNSIGNEDINTEGERCONST
                     {
                     mUNSIGNEDINTEGERCONST(); 
 
@@ -922,14 +922,14 @@ public class miniPLexer extends Lexer {
         try {
             int _type = STRINGCONST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:85:13: ( '(\\'' ( options {greedy=false; } : . )* '\\')' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:85:15: '(\\'' ( options {greedy=false; } : . )* '\\')'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:85:13: ( '(\\'' ( options {greedy=false; } : . )* '\\')' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:85:15: '(\\'' ( options {greedy=false; } : . )* '\\')'
             {
             match("('"); 
 
 
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:85:21: ( options {greedy=false; } : . )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:85:21: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -954,7 +954,7 @@ public class miniPLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:85:48: .
+            	    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:85:48: .
             	    {
             	    matchAny(); 
 
@@ -987,8 +987,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:89:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:89:7: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:89:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:89:7: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1000,7 +1000,7 @@ public class miniPLexer extends Lexer {
             }
 
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:89:27: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:89:27: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop8:
             do {
                 int alt8=2;
@@ -1013,7 +1013,7 @@ public class miniPLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:
+            	    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -1048,8 +1048,8 @@ public class miniPLexer extends Lexer {
     // $ANTLR start "DIGIT"
     public final void mDIGIT() throws RecognitionException {
         try {
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:92:17: ( '0' .. '9' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:92:17: ( '0' .. '9' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:
             {
             if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
                 input.consume();
@@ -1076,14 +1076,14 @@ public class miniPLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:95:9: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:95:11: '/*' ( options {greedy=false; } : . )* '*/'
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:95:9: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:95:11: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
 
 
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:95:16: ( options {greedy=false; } : . )*
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:95:16: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -1108,7 +1108,7 @@ public class miniPLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:95:43: .
+            	    // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:95:43: .
             	    {
             	    matchAny(); 
 
@@ -1143,8 +1143,8 @@ public class miniPLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:99:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:99:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:99:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:99:9: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -1170,12 +1170,12 @@ public class miniPLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:8: ( PROGRAMSYMBOL | BEGINSYMBOL | ENDSYMBOL | IFSYMBOL | THENSYMBOL | ELSESYMBOL | FISYMBOL | WHILESYMBOL | DOSYMBOL | ODSYMBOL | PRINTLNSYMBOL | READSYMBOL | ZUWEISUNGSSYMBOL | VERGLEICHSSYMBOL | KLAMMERAUFSYMBOL | KLAMMERZUSYMBOL | CONSTANTSYMBOL | PLUSMINUSSYMBOL | MALGETEILTSYMBOL | LISTCUTSYMBOL | CMDENDSYMBOL | REALCUTSYMBOL | BOOLEANCONST | INTEGERCONST | REALCONST | STRINGCONST | ID | COMMENT | WS )
+        // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:8: ( PROGRAMSYMBOL | BEGINSYMBOL | ENDSYMBOL | IFSYMBOL | THENSYMBOL | ELSESYMBOL | FISYMBOL | WHILESYMBOL | DOSYMBOL | ODSYMBOL | PRINTLNSYMBOL | READSYMBOL | ZUWEISUNGSSYMBOL | VERGLEICHSSYMBOL | KLAMMERAUFSYMBOL | KLAMMERZUSYMBOL | CONSTANTSYMBOL | PLUSMINUSSYMBOL | MALGETEILTSYMBOL | LISTCUTSYMBOL | CMDENDSYMBOL | REALCUTSYMBOL | BOOLEANCONST | INTEGERCONST | REALCONST | STRINGCONST | ID | COMMENT | WS )
         int alt10=29;
         alt10 = dfa10.predict(input);
         switch (alt10) {
             case 1 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:10: PROGRAMSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:10: PROGRAMSYMBOL
                 {
                 mPROGRAMSYMBOL(); 
 
@@ -1183,7 +1183,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:24: BEGINSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:24: BEGINSYMBOL
                 {
                 mBEGINSYMBOL(); 
 
@@ -1191,7 +1191,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:36: ENDSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:36: ENDSYMBOL
                 {
                 mENDSYMBOL(); 
 
@@ -1199,7 +1199,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:46: IFSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:46: IFSYMBOL
                 {
                 mIFSYMBOL(); 
 
@@ -1207,7 +1207,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:55: THENSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:55: THENSYMBOL
                 {
                 mTHENSYMBOL(); 
 
@@ -1215,7 +1215,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:66: ELSESYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:66: ELSESYMBOL
                 {
                 mELSESYMBOL(); 
 
@@ -1223,7 +1223,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:77: FISYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:77: FISYMBOL
                 {
                 mFISYMBOL(); 
 
@@ -1231,7 +1231,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 8 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:86: WHILESYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:86: WHILESYMBOL
                 {
                 mWHILESYMBOL(); 
 
@@ -1239,7 +1239,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 9 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:98: DOSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:98: DOSYMBOL
                 {
                 mDOSYMBOL(); 
 
@@ -1247,7 +1247,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 10 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:107: ODSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:107: ODSYMBOL
                 {
                 mODSYMBOL(); 
 
@@ -1255,7 +1255,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:116: PRINTLNSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:116: PRINTLNSYMBOL
                 {
                 mPRINTLNSYMBOL(); 
 
@@ -1263,7 +1263,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 12 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:130: READSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:130: READSYMBOL
                 {
                 mREADSYMBOL(); 
 
@@ -1271,7 +1271,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:141: ZUWEISUNGSSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:141: ZUWEISUNGSSYMBOL
                 {
                 mZUWEISUNGSSYMBOL(); 
 
@@ -1279,7 +1279,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 14 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:158: VERGLEICHSSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:158: VERGLEICHSSYMBOL
                 {
                 mVERGLEICHSSYMBOL(); 
 
@@ -1287,7 +1287,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 15 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:175: KLAMMERAUFSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:175: KLAMMERAUFSYMBOL
                 {
                 mKLAMMERAUFSYMBOL(); 
 
@@ -1295,7 +1295,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 16 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:192: KLAMMERZUSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:192: KLAMMERZUSYMBOL
                 {
                 mKLAMMERZUSYMBOL(); 
 
@@ -1303,7 +1303,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:208: CONSTANTSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:208: CONSTANTSYMBOL
                 {
                 mCONSTANTSYMBOL(); 
 
@@ -1311,7 +1311,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:223: PLUSMINUSSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:223: PLUSMINUSSYMBOL
                 {
                 mPLUSMINUSSYMBOL(); 
 
@@ -1319,7 +1319,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:239: MALGETEILTSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:239: MALGETEILTSYMBOL
                 {
                 mMALGETEILTSYMBOL(); 
 
@@ -1327,7 +1327,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:256: LISTCUTSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:256: LISTCUTSYMBOL
                 {
                 mLISTCUTSYMBOL(); 
 
@@ -1335,7 +1335,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:270: CMDENDSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:270: CMDENDSYMBOL
                 {
                 mCMDENDSYMBOL(); 
 
@@ -1343,7 +1343,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:283: REALCUTSYMBOL
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:283: REALCUTSYMBOL
                 {
                 mREALCUTSYMBOL(); 
 
@@ -1351,7 +1351,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:297: BOOLEANCONST
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:297: BOOLEANCONST
                 {
                 mBOOLEANCONST(); 
 
@@ -1359,7 +1359,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:310: INTEGERCONST
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:310: INTEGERCONST
                 {
                 mINTEGERCONST(); 
 
@@ -1367,7 +1367,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:323: REALCONST
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:323: REALCONST
                 {
                 mREALCONST(); 
 
@@ -1375,7 +1375,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 26 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:333: STRINGCONST
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:333: STRINGCONST
                 {
                 mSTRINGCONST(); 
 
@@ -1383,7 +1383,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 27 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:345: ID
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:345: ID
                 {
                 mID(); 
 
@@ -1391,7 +1391,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 28 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:348: COMMENT
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:348: COMMENT
                 {
                 mCOMMENT(); 
 
@@ -1399,7 +1399,7 @@ public class miniPLexer extends Lexer {
                 }
                 break;
             case 29 :
-                // Z:\\win7\\Studium\\CI\\CI2\\MiniP\\miniP.g:1:356: WS
+                // Z:\\win7\\Studium\\CI\\CI3\\MiniP\\miniP.g:1:356: WS
                 {
                 mWS(); 
 
