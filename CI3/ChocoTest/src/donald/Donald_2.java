@@ -19,15 +19,7 @@ import choco.kernel.solver.Solver;
  */
 public class Donald_2 {
     private static void addEqualsConstraint(Model model, IntegerVariable x, IntegerVariable y, IntegerVariable u_in, IntegerVariable u_out, IntegerVariable z) {
-        model.addConstraint(Choco.ifThenElse(
-            Choco.geq(Choco.plus(x, Choco.plus(y, u_in)), 10),
-                Choco.and(
-                    Choco.eq(u_out, 1),
-                    Choco.eq(Choco.plus(x, Choco.plus(y, u_in)), Choco.plus(z, 10))),
-                Choco.and(
-                    Choco.eq(u_out, 0),
-                    Choco.eq(Choco.plus(x, Choco.plus(y, u_in)), z))
-        ));
+        model.addConstraint(Choco.eq(Choco.plus(x, Choco.plus(y, u_in)), Choco.plus(z, Choco.mult(u_out, 10))));
     }
     
     public static void main(String[] args) {
@@ -52,11 +44,10 @@ public class Donald_2 {
         IntegerVariable u3 = Choco.makeIntVar("u3", 0, 1, Options.V_ENUM);
         IntegerVariable u4 = Choco.makeIntVar("u4", 0, 1, Options.V_ENUM);
         IntegerVariable u5 = Choco.makeIntVar("u5", 0, 1, Options.V_ENUM);
-        IntegerVariable u6 = Choco.makeIntVar("u6", 0, 1, Options.V_ENUM);
+        IntegerVariable u6 = Choco.makeIntVar("u6", 0, 0, Options.V_ENUM);
         
         // Add constraints.
         model.addConstraint(Choco.allDifferent(d, o, n, a, l, g, e, r, b, t));
-        model.addConstraint(Choco.eq(u6, 0));
         addEqualsConstraint(model, d, g, u5, u6, r);
         addEqualsConstraint(model, o, e, u4, u5, o);
         addEqualsConstraint(model, n, r, u3, u4, b);
