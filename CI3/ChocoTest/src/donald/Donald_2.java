@@ -37,7 +37,7 @@ public class Donald_2 {
         IntegerVariable r = Choco.makeIntVar("r", 0, 9, Options.V_ENUM);
         IntegerVariable b = Choco.makeIntVar("b", 0, 9, Options.V_ENUM);
         IntegerVariable t = Choco.makeIntVar("t", 0, 9, Options.V_ENUM);
-        
+
         IntegerVariable u0 = Choco.makeIntVar("u1", 0, 0, Options.V_ENUM);
         IntegerVariable u1 = Choco.makeIntVar("u1", 0, 1, Options.V_ENUM);
         IntegerVariable u2 = Choco.makeIntVar("u2", 0, 1, Options.V_ENUM);
@@ -45,7 +45,6 @@ public class Donald_2 {
         IntegerVariable u4 = Choco.makeIntVar("u4", 0, 1, Options.V_ENUM);
         IntegerVariable u5 = Choco.makeIntVar("u5", 0, 1, Options.V_ENUM);
         IntegerVariable u6 = Choco.makeIntVar("u6", 0, 0, Options.V_ENUM);
-        
         // Add constraints.
         model.addConstraint(Choco.allDifferent(d, o, n, a, l, g, e, r, b, t));
         addEqualsConstraint(model, d, g, u5, u6, r);
