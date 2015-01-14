@@ -1,6 +1,5 @@
 import java.io.*;
 import org.antlr.runtime.*;
-import org.antlr.runtime.tree.*;
 import org.antlr.runtime.debug.DebugEventSocketProxy;
 
 
@@ -10,19 +9,11 @@ public class __Test__ {
         buchstabenGrammarLexer lex = new buchstabenGrammarLexer(new ANTLRFileStream("Z:\\win7\\CI\\CI4\\output\\__Test___input.txt", "UTF8"));
         CommonTokenStream tokens = new CommonTokenStream(lex);
 
-
-        buchstabenGrammarParser parser = new buchstabenGrammarParser(tokens);
-        buchstabenGrammarParser.prog_return r = parser.prog();
-        CommonTreeNodeStream nodes = new CommonTreeNodeStream(r.getTree());
-
-
-        transformWalker walker = new transformWalker(nodes);
+        buchstabenGrammarParser g = new buchstabenGrammarParser(tokens, 49100, null);
         try {
-            walker.prog();
+            g.start();
         } catch (RecognitionException e) {
             e.printStackTrace();
         }
-
     }
-
 }

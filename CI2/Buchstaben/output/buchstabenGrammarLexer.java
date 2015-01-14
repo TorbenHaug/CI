@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g 2014-11-20 16:44:33
+// $ANTLR 3.4 Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g 2015-01-14 17:49:11
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -28,15 +28,15 @@ public class buchstabenGrammarLexer extends Lexer {
     public buchstabenGrammarLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g"; }
+    public String getGrammarFileName() { return "Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g"; }
 
     // $ANTLR start "CHAR"
     public final void mCHAR() throws RecognitionException {
         try {
             int _type = CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:96:6: ( ( 'A' .. 'Z' ) )
-            // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:
+            // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:96:6: ( ( 'A' .. 'Z' ) )
+            // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') ) {
                 input.consume();
@@ -64,8 +64,8 @@ public class buchstabenGrammarLexer extends Lexer {
         try {
             int _type = PLUS_MINUS_SIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:97:17: ( '+' | '-' )
-            // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:
+            // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:97:17: ( '+' | '-' )
+            // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:
             {
             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                 input.consume();
@@ -93,8 +93,8 @@ public class buchstabenGrammarLexer extends Lexer {
         try {
             int _type = EQUAL_SIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:98:12: ( '=' )
-            // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:98:14: '='
+            // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:98:12: ( '=' )
+            // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:98:14: '='
             {
             match('='); 
 
@@ -114,8 +114,8 @@ public class buchstabenGrammarLexer extends Lexer {
         try {
             int _type = IGNOREDSIGNES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:99:15: ( ( '\\n' | '\\r' | ' ' ) )
-            // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:99:17: ( '\\n' | '\\r' | ' ' )
+            // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:99:15: ( ( '\\n' | '\\r' | ' ' ) )
+            // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:99:17: ( '\\n' | '\\r' | ' ' )
             {
             if ( input.LA(1)=='\n'||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -141,7 +141,7 @@ public class buchstabenGrammarLexer extends Lexer {
     // $ANTLR end "IGNOREDSIGNES"
 
     public void mTokens() throws RecognitionException {
-        // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:1:8: ( CHAR | PLUS_MINUS_SIGN | EQUAL_SIGN | IGNOREDSIGNES )
+        // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:1:8: ( CHAR | PLUS_MINUS_SIGN | EQUAL_SIGN | IGNOREDSIGNES )
         int alt1=4;
         switch ( input.LA(1) ) {
         case 'A':
@@ -202,7 +202,7 @@ public class buchstabenGrammarLexer extends Lexer {
 
         switch (alt1) {
             case 1 :
-                // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:1:10: CHAR
+                // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:1:10: CHAR
                 {
                 mCHAR(); 
 
@@ -210,7 +210,7 @@ public class buchstabenGrammarLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:1:15: PLUS_MINUS_SIGN
+                // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:1:15: PLUS_MINUS_SIGN
                 {
                 mPLUS_MINUS_SIGN(); 
 
@@ -218,7 +218,7 @@ public class buchstabenGrammarLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:1:31: EQUAL_SIGN
+                // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:1:31: EQUAL_SIGN
                 {
                 mEQUAL_SIGN(); 
 
@@ -226,7 +226,7 @@ public class buchstabenGrammarLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // Z:\\win7\\Studium\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:1:42: IGNOREDSIGNES
+                // Z:\\win7\\CI\\CI2\\Buchstaben\\buchstabenGrammar.g:1:42: IGNOREDSIGNES
                 {
                 mIGNOREDSIGNES(); 
 

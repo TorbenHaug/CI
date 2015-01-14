@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Z:\\win7\\CI\\CI4\\buchstabenGrammar.g 2015-01-14 09:48:22
+// $ANTLR 3.4 Z:\\win7\\CI\\CI4\\buchstabenGrammar.g 2015-01-14 17:50:58
 
 import org.antlr.runtime.*;
 import java.util.Stack;
