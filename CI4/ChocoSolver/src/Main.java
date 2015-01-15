@@ -1,4 +1,6 @@
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import org.antlr.runtime.*;
 import org.antlr.runtime.debug.DebugEventSocketProxy;
 import org.antlr.runtime.tree.CommonTree;
@@ -7,10 +9,12 @@ import org.antlr.stringtemplate.StringTemplateGroup;
 import org.antlr.stringtemplate.language.AngleBracketTemplateLexer;
 
 
-public class __Test__ {
+public class Main {
 
     public static void main(String args[]) throws Exception {
-        ANTLRFileStream input = new ANTLRFileStream("Z:\\win7\\CI\\BuchstabenLoesung\\raetsel1.txt", "UTF8");
+        String savePath = "Z:\\win7\\CI\\CI4\\ChocoSolver\\src\\puzzleSolver\\PuzzleSolver.java";
+        String raetselFile = "Z:\\win7\\CI\\BuchstabenLoesung\\raetsel2.txt";
+        ANTLRFileStream input = new ANTLRFileStream(raetselFile, "UTF8");
         
         buchstabenGrammarLexer lexer = new buchstabenGrammarLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -39,5 +43,6 @@ public class __Test__ {
         String output = puzzle_return.getTemplate().toString();
         System.out.println("\n ************* \n Puzzle als Choco code \n ************* \n");
         System.out.println(output); 
+        Files.write(Paths.get(savePath), output.getBytes());
     }
 }

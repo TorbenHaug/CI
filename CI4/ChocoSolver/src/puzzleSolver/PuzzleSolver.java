@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package puzzleSolver;
 
 import choco.Choco;
@@ -53,47 +58,44 @@ public class PuzzleSolver {
         IntegerVariable E = Choco.makeIntVar("E", 0, 9, Options.V_ENUM); 
         IntegerVariable F = Choco.makeIntVar("F", 0, 9, Options.V_ENUM); 
         IntegerVariable G = Choco.makeIntVar("G", 0, 9, Options.V_ENUM); 
-        IntegerVariable H = Choco.makeIntVar("H", 0, 9, Options.V_ENUM); 
-        IntegerVariable I = Choco.makeIntVar("I", 0, 9, Options.V_ENUM); 
-        IntegerVariable J = Choco.makeIntVar("J", 0, 9, Options.V_ENUM); 
 
 
-        model.addConstraint(Choco.allDifferent(A, B, C, D, E, F, G, H, I, J));
+        model.addConstraint(Choco.allDifferent(A, B, C, D, E, F, G));
 
         addConstraintLine(
-                        Arrays.asList(A, H), 
-                        Arrays.asList(A, A, A),
-                        Arrays.asList(A, C, E)
+                        Arrays.asList(A, B, C), 
+                        Arrays.asList(C, B),
+                        Arrays.asList(A, E, E)
                 );
                 
         addConstraintLine(
-                        Arrays.asList(A, C, E), 
-                        Arrays.asList(D, A, C),
-                        Arrays.asList(J, F, D)
+                        Arrays.asList(A, B, C), 
+                        Arrays.asList(D, D, E),
+                        Arrays.asList(F, C, F)
                 );
                 
         addConstraintLine(
-                        Arrays.asList(D, A, C), 
-                        Arrays.asList(H, F, C),
-                        Arrays.asList(I, I, I)
+                        Arrays.asList(C, B), 
+                        Arrays.asList(B, G, E),
+                        Arrays.asList(B, C, A)
                 );
                 
         addConstraintLine(
-                        Arrays.asList(A, H), 
-                        Arrays.asList(I, I, I),
-                        Arrays.asList(J, B, J)
+                        Arrays.asList(A, E, E), 
+                        Arrays.asList(C, B, G),
+                        Arrays.asList(D, G, A, E)
                 );
                 
         addConstraintLine(
-                        Arrays.asList(G, I), 
-                        Arrays.asList(H, F, C),
-                        Arrays.asList(A, A, A)
+                        Arrays.asList(F, C, F), 
+                        Arrays.asList(B, C, A),
+                        Arrays.asList(D, G, A, E)
                 );
                 
         addConstraintLine(
-                        Arrays.asList(J, B, J), 
-                        Arrays.asList(G, I),
-                        Arrays.asList(J, F, D)
+                        Arrays.asList(D, D, E), 
+                        Arrays.asList(B, G, E),
+                        Arrays.asList(C, B, G)
                 );
                 
         
@@ -109,9 +111,6 @@ public class PuzzleSolver {
             System.out.println("E = " + s.getVar(E).getVal()); 
             System.out.println("F = " + s.getVar(F).getVal()); 
             System.out.println("G = " + s.getVar(G).getVal()); 
-            System.out.println("H = " + s.getVar(H).getVal()); 
-            System.out.println("I = " + s.getVar(I).getVal()); 
-            System.out.println("J = " + s.getVar(J).getVal()); 
 
             
 
